@@ -14,12 +14,13 @@ def load_api_key() -> str:
 def build_messages() -> list[dict[str, str]]:
     return [
         {
+            "role": "system",
+            "content": "You are a helpful assistant.",
+        },
+        {
             "role": "user",
-            "content": (
-                "Do you know Saurav Anand, who has taken admission in MAIT "
-                "and is a student of lateral entry batch 2025-2028?"
-            ),
-        }
+            "content": "Please respond with a short, polite answer.",
+        },
     ]
 
 
@@ -28,7 +29,7 @@ def main() -> None:
     client = Groq(api_key=api_key)
     model = "llama-3.3-70b-versatile"
     messages = build_messages()
-    response = client.chat.completions.create(model=model, messages=messages)
+    response = client.chat.completions.create(model=model, messages=messages, temperature=0)
 
     print("#######################################\n")
     answer = response.choices[0].message.content

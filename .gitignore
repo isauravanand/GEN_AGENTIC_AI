@@ -1,0 +1,19 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+.env
+venv/
+.venv/
+ENV/
+env/
+
+# Pyproject/venv lock files
+*.egg-info/
+
+# Local IDE and OS files
+.vscode/
+.DS_Store
+Thumbs.db
