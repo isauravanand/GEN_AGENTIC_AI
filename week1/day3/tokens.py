@@ -27,7 +27,7 @@ for prompt in prompts:
         "content": prompt
     }
     messages=[message]
-    response=client.chat.completions.create(model=model, messages=messages)
+    response=client.chat.completions.create(model=model, messages=messages, max_tokens=500)
     usage=response.usage
     print(
         f"Prompt: {prompt} --> your tokens: {usage.prompt_tokens} "
