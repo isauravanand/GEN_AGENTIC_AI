@@ -72,11 +72,3 @@ print(ticket.email)
 print(ticket.issue)
 
 
-
-#Homework
-
-# take resume in pdf or word
-# have hr give you a list of things like skill, experience, projects
-# extract these from resume 
-# match against the hr list
-# generate a percentage of matching or not
